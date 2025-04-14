@@ -20,4 +20,6 @@ var compose = function(functions) {
     return functions.reduce((preFn,nextFn) =>{
         return result => preFn(nextFn(result));
     });
+
+    // return result => functions.reduceRight((acc, fn) => fn(acc), result);
 };
